@@ -1,29 +1,16 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Phone Call Simulation</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tatile Gidebilir miyim?</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="phone-frame">
-    <iframe class="youtube-video" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1" 
-      title="YouTube video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-    <div class="incoming-call hidden" id="incomingCall">
-      <div class="caller-info">
-        <img src="caller.webp" alt="Caller" class="caller-photo">
-        <p class="caller-name">Ahsen Kaya</p>
-      </div>
-      <div class="call-buttons">
-        <button class="btn red" onclick="declineCall()"><i class="fa-solid fa-phone-slash"></i></button>
-        <button class="btn green" onclick="acceptCall()"><i class="fa-solid fa-phone"></i></button>
-      </div>
+  <div class="container">
+    <p class="question">Tatile Gidebilir miyim?</p>
+    <div class="buttons">
+      <button class="yes-btn">Evet</button>
+      <button class="no-btn">Hayır</button>
     </div>
   </div>
-
-  <script src="script.js"></script>
-</body>
-</html>

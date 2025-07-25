@@ -1,15 +1,15 @@
-window.onload = function() {
-  const call = document.getElementById("incomingCall");
-  setTimeout(() => {
-    call.classList.remove("hidden");
-    call.classList.add("show");
-  }, 3000); // 3 saniye sonra arama geliyor
-};
+let yesButton = document.querySelector('.yes-btn');
+let noButton = document.querySelector('.no-btn');
+let questionText = document.querySelector('.question');
+let scale = 1; // Başlangıç ölçeği
 
-function acceptCall() {
-  alert("Arama kabul edildi!");
-}
+yesButton.addEventListener('click', () => {
+  scale += 0.25; // Her tıklamada "Hayır" butonu daha belirgin büyüsün
 
-function declineCall() {
-  alert("Arama reddedildi!");
-}
+  // "Hayır" butonunu büyüt
+  noButton.style.transform = `scale(${scale})`;
+
+  // Eğer "Hayır" butonu yeterince büyüdüyse "Evet" butonunu devre dışı bırak
+  if (scale >= 2.8) { // Bu eşik değeri, "Hayır" butonu "Evet" butonunun üzerine geldiğinde ayarlanmıştır
+    yesButton.disabled = true;
+    ques
